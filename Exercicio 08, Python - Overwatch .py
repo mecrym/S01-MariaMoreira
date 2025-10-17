@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Heroi:
     def __init__(self, nome, funcao):
         self.nome = nome
@@ -20,11 +22,11 @@ class Dano(Heroi):
     def usar_ultimate(self):
         print(f"{self.nome} ({self.funcao}): Ativando habilidade ofensiva.")
 
-personagem_tanque = Tanque("Personagem Tanque")
-personagem_dano = Dano("Personagem de Dano")
+tanque = Tanque("Tanque")
+dano = Dano(" Dano")
 
-lista_de_personagens = [personagem_tanque, personagem_dano]
+lista_de_personagens = [tanque, dano]
 
-print("--- Executando a habilidade especial de cada personagem ---")
+print("# Executando a habilidade especial de cada personagem #")
 for personagem in lista_de_personagens:
     personagem.usar_habilidade_especial()
